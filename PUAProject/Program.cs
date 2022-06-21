@@ -15,8 +15,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 // Add services to the container.
-//#builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-//#    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
+builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
 builder.Services.AddDbContext<PUA20832Context>(options => options.UseSqlServer(
 
                 builder.Configuration.GetConnectionString("DefaultConnection"),
@@ -33,7 +33,7 @@ builder.Services.AddControllersWithViews(options =>
 });
 builder.Services.AddRazorPages()
     .AddRazorRuntimeCompilation()
-    //.AddMicrosoftIdentityUI()
+    .AddMicrosoftIdentityUI()
     ;
 
 builder.Services.AddSession(options =>

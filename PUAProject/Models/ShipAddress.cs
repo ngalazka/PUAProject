@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PUAProject.Models
 {
@@ -14,6 +15,7 @@ namespace PUAProject.Models
         public int Id { get; set; }
         public string Number { get; set; } = null!;
         public string Street { get; set; } = null!;
+        [Display(Name = "Postal Code")]
         public string PostalCode { get; set; } = null!;
         public string City { get; set; } = null!;
         public string Country { get; set; } = null!;

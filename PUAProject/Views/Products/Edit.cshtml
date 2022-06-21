@@ -33,35 +33,20 @@
                 <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="CreatedDate" class="control-label"></label>
-                <input asp-for="CreatedDate" class="form-control" />
-                <span asp-validation-for="CreatedDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PublicationDate" class="control-label"></label>
-                <input asp-for="PublicationDate" class="form-control" />
-                <span asp-validation-for="PublicationDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastModifiedDate" class="control-label"></label>
-                <input asp-for="LastModifiedDate" class="form-control" />
-                <span asp-validation-for="LastModifiedDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastModifiedBy" class="control-label"></label>
-                <input asp-for="LastModifiedBy" class="form-control" />
-                <span asp-validation-for="LastModifiedBy" class="text-danger"></span>
-            </div>
+                <input type='hidden' asp-for="CreatedDate" class="form-control" />
+                <input type='hidden' asp-for="PublicationDate" class="form-control" />
+                <input type='hidden' asp-for="LastModifiedDate" class="form-control" />
+                <input type='hidden' asp-for="LastModifiedBy" class="form-control" />
+           
             <div class="form-group">
                 <label asp-for="IsActive" class="control-label"></label>
                 <input asp-for="IsActive" class="form-control" />
                 <span asp-validation-for="IsActive" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Size" class="control-label"></label>
-                <input asp-for="Size" class="form-control" />
-                <span asp-validation-for="Size" class="text-danger"></span>
+                <label asp-for="ImageUrl" class="control-label"></label>
+                <input asp-for="ImageUrl" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

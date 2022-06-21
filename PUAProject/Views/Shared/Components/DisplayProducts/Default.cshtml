@@ -1,0 +1,23 @@
+﻿@model IEnumerable<PUAProject.ViewModelsCart.ProductViewModel>
+
+<div class="col-lg-9">
+<div class="container">
+<div class="row justify-content-around">
+@foreach( var product in Model){
+<div class="card" style="width: 18rem;">
+  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+    <img src="@product.ImageUrl" class="img-fluid"/>
+    <a href="#!">
+      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+    </a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">@product.ProductTitle</h5>
+    <p class="card-text">@product.Price</p>
+    <a asp-controller="Products" asp-action="AddToCart" asp-route-id="@product.Id" class="btn btn-primary">Buy now</a>
+  </div>
+</div>
+}
+</div>
+</div>
+</div>

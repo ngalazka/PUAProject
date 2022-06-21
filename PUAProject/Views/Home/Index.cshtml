@@ -1,8 +1,131 @@
-﻿@{
+﻿@using System.Collections
+@using PUAProject.Models
+@model IEnumerable<PUAProject.Models.Product>;
+
+@{
     ViewData["Title"] = "Home Page";
 }
+<section class="intro">
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 IntroContainer"  id="home">        
+        <h1 class="text-center heading1">Funny Socks Store</h1>    
+        <p class="text-center taglinestl">
+              Express yourself
+        </p>
+      </div>  
+      </div> 
+      </div> 
+</section>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<!-- Section -1 -->
+    <section id="store-section">
+        <h3 id="store-heading">Our Socks Store!</h3>
+        <p id="store-desc">Find your style</p>
+        <div    id="store-items-wrapper">
+            <div class="store-item">
+                <div class="icon-wrapper"></div>
+                <h3>Free Shipping</h3>
+                <p>On all order over 20£. </p>
+            </div>
+            <div class="store-item">
+                <div class="icon-wrapper"></div>
+                <h3>Unique design</h3>
+                <p>A diverse selection of original socks.</p>
+            </div>
+            <div class="store-item">
+                <div class="icon-wrapper"></div>
+                <h3>Sale</h3>
+                <p>Up to 70%!</p>
+            </div>
+            <div class="store-item">
+                <div class="icon-wrapper"></div>
+                <h3>High Quality</h3>
+                <p>Wear them every day and enjoy!</p>
+            </div>
+        </div>
+    </section>
+
+<br/><br/>
+
+<!-- Section -2 -->
+
+@await Component.InvokeAsync("DisplayProducts")
+
+
+
+<!-- Section-3 -->
+
+        <section id="follow-section">
+            <div id="left-section">
+                <img src="https://i.postimg.cc/FHHH94MJ/karuzela.jpg" alt="Socks2">
+            </div>
+            <div id="right-section">
+                <div id="text-wrapper">
+                    <h3>Follow Us</h3>
+                    <p>Colorful socks have turned the fashion world upside down. Let yourself be carried away by the new wave of colors. </p>
+
+                    <input id="subscribe-email" placeholder="Your Email" autocomplete="off">
+                   
+                    <input id="subscribe-btn" type="submit" value="Subscribe">
+                </div>
+            </div>
+        </section>
+
+
+<!-- Section-4 -->
+
+
+        <section id="stats-section">
+            <div id="stats-wrapper">
+                <div class="stats-item">
+                    <h3>7</h3>
+                    <p>Year of experiences</p>
+                </div>
+                <div class="stats-item">
+                    <h3>123k</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stats-item">
+                    <h3>72k</h3>
+                    <p>100% Satisfaction</p>
+                </div>
+                <div class="stats-item">
+                    <h3>10</h3>
+                    <p>Countries</p>
+                </div>
+            </div>
+        </section>
+
+
+<!-- Section - 5 -->
+
+        <section id="address-section">
+            <div id="address-wrapper">
+                <div>
+                    <p class="green-heading">Contact Us</p>
+                    <h3 class="section-heading">Address Information</h3>
+
+                    <h4 class="address-heading">London Store</h4>
+                    <p class="address-lines">
+                        Roeterseiland Campus Building E<br>6th floor London<br>Monday to Friday : 9am to 8pm<br>funnysockde.mail.com</p>
+
+                    <h4 class="address-heading">Berlin Store</h4>
+                    <p class="address-lines">
+                        Roeterseiland Campus Building E<br>6th floor London<br>Monday to Friday : 9am to 8pm<br>funnysockgb.mail.com</p>
+                </div>
+                <div>
+                    <p class="green-heading">Meet Our Team</p>
+                    <h3 class="section-heading">Get In Touch</h3>
+
+                    <form>
+                        <input class="input-box" type="text" name="name" placeholder="Name">
+                        <input class="input-box" type="text" name="phone" placeholder="Phone">
+                        <input class="input-box" type="email" name="email" placeholder="E-mail">
+                        <textarea class="input-box">Message</textarea>
+                        <input id="btn-submit" class="primary-button" type="submit" value="Submit Now">
+                    </form>
+                </div>
+            </div>
+        </section>

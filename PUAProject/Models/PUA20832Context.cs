@@ -7,8 +7,13 @@ namespace PUAProject.Models
 {
     public partial class PUA20832Context : DbContext
     {
+       
+        public string DBPath { get; set; }
+
         public PUA20832Context()
         {
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            DBPath = Path.Join(path, "PUA-20832");
         }
 
         public PUA20832Context(DbContextOptions<PUA20832Context> options)
@@ -119,6 +124,8 @@ namespace PUAProject.Models
 
                 entity.Property(e => e.CreatedDate).HasDefaultValueSql("(getdate())");
 
+                entity.Property(e => e.ImageUrl).HasMaxLength(300);
+
                 entity.Property(e => e.IsActive)
                     .IsRequired()
                     .HasDefaultValueSql("((1))");
@@ -129,11 +136,11 @@ namespace PUAProject.Models
 
                 entity.Property(e => e.LastModifiedDate).HasDefaultValueSql("(getdate())");
 
+                entity.Property(e => e.Price).HasColumnType("decimal(18, 2)");
+
                 entity.Property(e => e.ProductTitle).HasMaxLength(250);
 
                 entity.Property(e => e.PublicationDate).HasDefaultValueSql("(getdate())");
-
-                entity.Property(e => e.Size).HasMaxLength(50);
 
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Products)
@@ -205,6 +212,19 @@ namespace PUAProject.Models
             });
 
             OnModelCreatingPartial(modelBuilder);
+        }
+        public void SeedInitialData()
+        {
+            if (Products.Any())
+            {
+                Products.RemoveRange(Products);
+                SaveChanges();
+            }
+            if (Categories.Any())
+            {
+                Categories.RemoveRange(Categories);
+                SaveChanges();
+            }
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

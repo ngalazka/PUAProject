@@ -92,7 +92,21 @@ p.taglinestl {
     }
 
 
+/* section-2 */
 
+#products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 2%;
+    flex-grow: 1;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 0.9rem 0.9rem;
+    text-align: center;
+}
 
 
 /* Section-3 */

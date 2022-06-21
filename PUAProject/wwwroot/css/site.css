@@ -1,18 +1,322 @@
-html {
-  font-size: 14px;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+.IntroContainer {
+    height: 600px;
+    background: url('https://i.postimg.cc/PJhyh99N/pexels-the-lazy-artist-gallery-1117485.jpg');
+    background-repeat: no-repeat;
+    background-size: 120% 150%;
+    background-position: top left;
+    padding-top: 80px;
 }
 
-@media (min-width: 768px) {
-  html {
+h1.heading1 {
+    margin-top: 150px;
+    color: white;
+    font-size: 82px;
+    text-shadow: 0px 0px 1px #444, 0px 0px 2px #aaa;
+    font-family: sans-serif;
+}
+
+p.taglinestl {
+    color: white;
+    font-size: 32px;
+    text-transform: capitalize;
+    margin-top: 8px;
+    text-shadow: 0px 0px 3px black;
+}
+/* section-1 */
+#store-section {
+    width: 100%;
+    background-color: #f7eee2;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    text-align: center;
+}
+
+#store-heading {
+    font-size: 44px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+#store-desc {
     font-size: 16px;
-  }
+    font-weight: 500;
+    margin: 0;
+    color: #8b8b99;
+    letter-spacing: 0.5px;
+    margin-bottom: 55px;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+#store-items-wrapper {
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    justify-content: stretch;
+    margin: 12px auto;
 }
 
-body {
-  margin-bottom: 60px;
+.store-item {
+    width: 25%;
+    text-align: center;
+    padding: 24px;
+}
+
+    .store-item h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 14px 0px;
+    }
+
+    .store-item p {
+        margin: 16px 0px;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        color: #8b8b99;
+    }
+
+.icon-wrapper {
+    display: inline-block;
+    background-color: #e3b375;
+    border-radius: 50%;
+    padding: 40px;
+    color: white;
+
+}
+
+    .icon-wrapper:hover {
+        transform: scale(1.1);
+    }
+
+
+
+
+
+/* Section-3 */
+
+#follow-section {
+    display: flex;
+    justify-content: stretch;
+}
+
+#left-section {
+    width: 67%;
+    display: inline-block;
+    margin: 0;
+}
+
+    #left-section img {
+        width: 100%;
+    }
+
+#right-section {
+    width: 33.33%;
+    margin: 0;
+    display: inline-block;
+    background-image: url(https://i.postimg.cc/htj7xzjP/karuzela1.jpg);
+    background-position: left;
+    background-size: cover;
+}
+
+    #right-section #text-wrapper {
+        margin: 115px;
+    }
+
+        #right-section #text-wrapper h3 {
+            font-size: 39px;
+            color: white;
+            text-shadow: 0px 0px 3px black;
+            font-weight: 600;
+            margin: 0 0 8px;
+        }
+
+        #right-section #text-wrapper p {
+            color: whitesmoke;
+            font-size: 14px;
+            font-weight: 400;
+            text-shadow: 0px 0px 3px black;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+#subscribe-email {
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 500;
+    background-color: white;
+    padding: 12px;
+    color: #8b8b99;
+    font-size: 16px;
+    margin-top: 60px;
+    display: block;
+}
+
+#subscribe-btn {
+    background-color: #f69dad;
+    padding: 16px 42px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    border: 0;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 16px;
+}
+
+    #subscribe-btn:hover {
+        color: #f69dad;
+        border: 1px solid #f69dad;
+        background-color: transparent;
+    }
+
+
+/* Section 4 */
+
+#stats-section {
+    width: 100%;
+    background-color: #f6fcfa;
+}
+
+#stats-wrapper {
+    width: 100%;
+    max-width: 1140px;
+    padding: 100px 0;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: stretch;
+}
+
+.stats-item {
+    width: 25%;
+    padding: 0 64px;
+}
+
+    .stats-item h3 {
+        font-size: 44px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .stats-item p {
+        color: #57e3b5;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        font-style: italic;
+        margin: 0;
+        font-weight: 400;
+    }
+
+
+
+
+/* Section - 5 */
+
+
+#address-wrapper {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+
+    #address-wrapper > div {
+        width: 50%;
+    }
+
+.green-heading {
+    color: #91ac41;
+    font-size: 24px;
+    font-family: 'Quicksand', cursive;
+    margin: 0;
+    font-weight: 400;
+    margin-top: 35px;
+}
+
+.section-heading {
+
+    font-size: 44px;
+    margin: 0;
+}
+
+.store-item h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.section-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #8b8b99;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.address-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 32px;
+}
+
+.address-lines {
+    font-size: 16px;
+    font-weight: 400;
+    color: #8b8b99;
+    letter-spacing: 0.5px;
+    line-height: 2;
+    margin: 0;
+}
+
+#address-wrapper > div:last-of-type {
+    width: 40%;
+}
+
+.input-box {
+    width: 100%;
+    padding: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #8b8b99;
+    border-radius: 6px;
+    border: 1px solid #e5e6ec;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+#btn-submit {
+    font-size: 16px;
+}
+
+.primary-button {
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background-color: #9AECDB;
+    padding: 9px 34px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 4px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #3c6382;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 30px 0px;
 }

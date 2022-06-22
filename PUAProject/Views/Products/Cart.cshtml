@@ -28,6 +28,21 @@
     </table>
     <br>
     <a asp-controller="Home" asp-action="Index">Continue Shopping</a>
+<button a class="btn btn-info" role="button" onclick="myFunction()">Submit</button>
+
+<p id="order"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  if (confirm("Confirm your order.")) {
+    txt = "Good choice, your order has been submitted!";
+  } else {
+    txt = "Looks like you want to continue!";
+  }
+  document.getElementById("order").innerHTML = txt;
+}
+</script>
 
 </body>
 </html>

@@ -8,6 +8,7 @@
 <body>
     <table cellpadding="4" cellspacing="5" border="1">
         <tr>
+            <th>Option</th>
             <th>Name</th>
             <th>Photo</th>
             <th>Price</th>
@@ -16,7 +17,7 @@
         </tr>
 @foreach (var item in Model){
  <tr>
-
+                <td><a asp-controller="cart" a class="btn btn-info" role="button" asp-action="RemoveProduct" asp-route-id="@item.Id">Remove</a></td>
                 <td>@item.ProductTitle</td>
                 <td><img src="@item.ImageUrl" width="60" /> </td>
                 <td>@item.Price</td>

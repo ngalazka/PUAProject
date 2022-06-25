@@ -122,6 +122,15 @@ namespace PUAProject.Controllers
             return View(cartContent);
 
         }
+        
+        public async Task<IActionResult> RemoveProduct(int Id)
+        {
+            List<CartContentModel> cart = SessionHelper.GetObjectFromJson<List<CartContentModel>>(HttpContext.Session, "cart");
+            int index = isExist(Id);
+            cart.RemoveAt(index);
+            SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
+            return RedirectToAction("Index");
+        }
 
         // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
